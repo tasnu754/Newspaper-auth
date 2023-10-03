@@ -1,16 +1,38 @@
+import { NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
     const list = (
       <>
         <li>
-          <a>Home</a>
+          <NavLink
+            to="/"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""
+            }
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <a>About</a>
+          <NavLink
+            to="/about"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""
+            }
+          >
+            About
+          </NavLink>
         </li>
         <li>
-          <a>Career</a>
+          <NavLink
+            to="/career"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""
+            }
+          >
+            Career
+          </NavLink>
         </li>
       </>
     );
@@ -37,18 +59,22 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-[#706F6F] text-lg font-normal gap-4"
               >
                 {list}
               </ul>
             </div>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">{list}</ul>
+            <ul className="menu menu-horizontal px-1 text-[#706F6F] text-lg font-normal gap-4">
+              {list}
+            </ul>
           </div>
           <div className="navbar-end flex gap-4">
             <img className="h-[44px] " src="/public/assets/user.png" alt="" />
-            <a className="btn">Login</a>
+            <a className="btn bg-[#403F3F] text-white hover:text-black">
+              Login
+            </a>
           </div>
         </div>
       </div>

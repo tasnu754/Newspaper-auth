@@ -11,6 +11,7 @@ const BreakingNews = () => {
         pauseOnClick="true"
         gradientColor="#D72050"
         speed={130}
+        className="text-[#403F3F] font-semibold"
       >
         I can be a React component, multiple React components, or just some
         text.Discover thousands of options, easy to customize layouts, one-click
