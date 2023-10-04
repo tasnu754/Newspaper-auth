@@ -17,6 +17,8 @@ const RightBar = () => {
         {categories.map((category) => (
             <CategoryName key={category.id} name={category.name} id={category.id}></CategoryName>
         ))}
+
+    
       </div>
     );
 };

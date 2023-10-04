@@ -4,6 +4,7 @@ import Header from "../../Components/Header/Header";
 import Navbar from "../../Components/Navbar/Navbar";
 import RightBar from "../../Components/Rightbar/RightBar";
 import LeftBar from "../../Components/Leftbar/LeftBar";
+import RightCards from "../../Components/RightCards/RightCards";
 
 
 const Home = () => {
@@ -16,8 +17,9 @@ const Home = () => {
         <div className="grid  grid-cols-4 space-y-10">
           <div className="col-span-4 lg:col-span-1">
             <RightBar></RightBar>
+            <RightCards></RightCards>
           </div>
-          <div className="col-span-4 lg:col-span-2">
+          <div className="col-span-4 lg:col-span-2 space-y-10">
             {/* <NavLink to={`/news.json/${id}`}>
               <News></News>
             </NavLink> */}
