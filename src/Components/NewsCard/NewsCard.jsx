@@ -7,7 +7,7 @@ const NewsCard = ({ newsCard }) => {
       <div className="card lg:mx-10 mb-10 bg-base-100 shadow-2xl">
         <h2 className="card-title text-center my-4 mx-4">{newsCard.title}</h2>
         <figure>
-          <img className=" w-full" src={newsCard.thumbnail_url} alt="Shoes" />
+          <img className=" w-[90%]" src={newsCard.thumbnail_url} alt="Shoes" />
         </figure>
         <div className="card-body">
           {newsCard.details.length > 200 ? (
@@ -24,9 +24,7 @@ const NewsCard = ({ newsCard }) => {
           ) : (
             <p>{newsCard.details}</p>
           )}
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
+          
         </div>
       </div>
     </div>

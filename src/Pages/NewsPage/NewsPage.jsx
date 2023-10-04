@@ -1,7 +1,7 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import Header from "../../Components/Header/Header";
 import LeftBar from "../../Components/Leftbar/LeftBar";
-import Navbar from "../../Components/Navbar/Navbar";
+
 import { useEffect, useState } from "react";
 
 const NewsPage = () => {
@@ -16,22 +16,34 @@ const NewsPage = () => {
   return (
     <div>
       <Header></Header>
-      <Navbar></Navbar>
+
       <div className="grid grid-cols-4 mt-10">
         <div className=" col-span-3 flex justify-center">
           <div className="card card-compact  w-full bg-base-100 shadow-xl">
-            <div><figure>
-              <img
-                className="w-[90%] mx-auto "
-                src={data.thumbnail_url}
-                alt=""
-              />
-            </figure></div>
+            <div>
+              <figure>
+                <img
+                  className="w-[90%] h-[650px] mx-auto "
+                  src={data.thumbnail_url}
+                  alt=""
+                />
+              </figure>
+            </div>
             <div className="card-body">
-              <h2 className="card-title">{data.title}</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <h2 className="card-title text-xl font-extrabold">
+                {data.title}
+              </h2>
+              <p className=" text-base font-semibold">{data.details}</p>
+              <div className="flex justify-between text-pink-500 font-bold">
+                <h2>Badge: {data?.rating?.badge}</h2>
+                <h2>View: {data.total_view}</h2>
+              </div>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
+                <Link to="/">
+                  <button className="btn btn-outline btn-info">
+                    Go Back To Home
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
