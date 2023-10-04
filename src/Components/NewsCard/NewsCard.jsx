@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const NewsCard = ({ newsCard }) => {
   return (
     <div>
-      <div className="card mx-10 mb-10 bg-base-100 shadow-xl">
-        <h2 className="card-title text-center my-4">{newsCard.title}</h2>
+      <div className="card lg:mx-10 mb-10 bg-base-100 shadow-2xl">
+        <h2 className="card-title text-center my-4 mx-4">{newsCard.title}</h2>
         <figure>
           <img className=" w-full" src={newsCard.thumbnail_url} alt="Shoes" />
         </figure>
@@ -14,7 +14,7 @@ const NewsCard = ({ newsCard }) => {
             <p>
               {newsCard.details.slice(0, 200)}
               <Link
-                to={`/newsDetails/${newsCard.category_id}`}
+                to={`/newsDetails/${newsCard._id}`}
                 className="text-red-700 font-bold"
               >
                 {" "}
