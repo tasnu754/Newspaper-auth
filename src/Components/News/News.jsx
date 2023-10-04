@@ -1,13 +1,34 @@
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
+import NewsCard from "../NewsCard/NewsCard";
 
 
 const News = () => {
+   
     const param = useParams();
-    console.log(param);
+    const allCard = useLoaderData();
+     const [newsCards, setNewsCard] = useState([]);
+
+    console.log(param ,allCard.length);
+
+    useEffect(() => {
+    //   setNewsCard([]);
+      const cards = allCard.filter((card) => card.category_id == param.id);
+      setNewsCard(cards);
+      console.log(cards.length);
+    }, [allCard, param.id]);
+
     return (
-        <div>
-            <h2>Hello</h2>
-        </div>
+      <div>
+        {param.id == 0 &&
+          allCard.map((card) => (
+            <NewsCard key={card._id} newsCard={card}></NewsCard>
+          ))}
+        {param.id != 0 &&
+          newsCards.map((card) => (
+            <NewsCard key={card._id} newsCard={card}></NewsCard>
+          ))}
+      </div>
     );
 };
 

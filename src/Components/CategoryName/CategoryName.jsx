@@ -19,8 +19,8 @@ const CategoryName = ({ name ,id  }) => {
 };
 
 CategoryName.propTypes = {
-  name: PropTypes.object.isRequired,
-  id: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 
