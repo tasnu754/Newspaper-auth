@@ -2,14 +2,14 @@ import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 
 
-const CategoryName = ({ name }) => {
+const CategoryName = ({ name ,id  }) => {
 
     return (
       <div className="h-[64px]">
         <NavLink
-          to="/"
+          to={`/news.json/${id}`}
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
+            isPending ? "pending" : isActive ? "bg-black text-red-600" : ""
           }
         >
           {name}
@@ -20,6 +20,7 @@ const CategoryName = ({ name }) => {
 
 CategoryName.propTypes = {
   name: PropTypes.object.isRequired,
+  id: PropTypes.object.isRequired,
 };
 
 

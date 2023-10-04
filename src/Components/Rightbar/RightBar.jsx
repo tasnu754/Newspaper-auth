@@ -15,7 +15,7 @@ const RightBar = () => {
       <div>
         <h2 className="text-[#403F3F] text-xl  font-semibold mb-4">All Caterogy </h2>
         {categories.map((category) => (
-            <CategoryName key={category.id} name={category.name}></CategoryName>
+            <CategoryName key={category.id} name={category.name} id={category.id}></CategoryName>
         ))}
       </div>
     );

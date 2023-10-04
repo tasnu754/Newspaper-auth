@@ -9,6 +9,9 @@ import MainPage from './Pages/mainPage/MainPage';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Career from './Pages/Career/Career';
+import News from './Components/News/News';
+
+
 
 const router = createBrowserRouter([
   {
@@ -17,17 +20,23 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        children: [
+          {
+            path: "/news.json/:id",
+            element: <News></News>,
+          },
+        ],
       },
       {
         path: "/about",
-        element:<About></About>
+        element: <About></About>,
       },
       {
         path: "/career",
-        element: <Career></Career>
-      }
-    ]
+        element: <Career></Career>,
+      },
+    ],
   },
 ]);
 
