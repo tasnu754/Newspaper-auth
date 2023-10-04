@@ -10,6 +10,8 @@ import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Career from './Pages/Career/Career';
 import News from './Components/News/News';
+import NewsPage from './Pages/NewsPage/NewsPage';
+import HomeNews from './Components/HomeNews/HomeNews';
 
 
 
@@ -23,9 +25,14 @@ const router = createBrowserRouter([
         element: <Home></Home>,
         children: [
           {
+            path: "/",
+            element: <HomeNews></HomeNews>,
+            loader: () => fetch("/news.json"),
+          },
+          {
             path: "/news.json/:id",
             element: <News></News>,
-            loader:() => fetch("/news.json"),
+            loader: () => fetch("/news.json"),
           },
         ],
       },
@@ -36,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/career",
         element: <Career></Career>,
+      },
+      {
+        path: "/newsDetails/:id",
+        element: <NewsPage></NewsPage>,
       },
     ],
   },

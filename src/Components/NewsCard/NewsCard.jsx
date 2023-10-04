@@ -13,7 +13,13 @@ const NewsCard = ({ newsCard }) => {
           {newsCard.details.length > 200 ? (
             <p>
               {newsCard.details.slice(0, 200)}
-              <Link to="/newsDetails" className="text-red-700 font-bold"> Read more...</Link>
+              <Link
+                to={`/newsDetails/${newsCard.category_id}`}
+                className="text-red-700 font-bold"
+              >
+                {" "}
+                Read more...
+              </Link>
             </p>
           ) : (
             <p>{newsCard.details}</p>

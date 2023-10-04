@@ -12,7 +12,6 @@ const News = () => {
     console.log(param ,allCard.length);
 
     useEffect(() => {
-    //   setNewsCard([]);
       const cards = allCard.filter((card) => card.category_id == param.id);
       setNewsCard(cards);
       console.log(cards.length);
@@ -20,7 +19,7 @@ const News = () => {
 
     return (
       <div>
-        {param.id == 0 &&
+        {(param.id == 0)&&
           allCard.map((card) => (
             <NewsCard key={card._id} newsCard={card}></NewsCard>
           ))}
