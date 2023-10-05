@@ -12,6 +12,8 @@ import Career from './Pages/Career/Career';
 import News from './Components/News/News';
 import NewsPage from './Pages/NewsPage/NewsPage';
 import HomeNews from './Components/HomeNews/HomeNews';
+import Register from './Pages/Register/Register';
+import Login from './Pages/Login/Login';
 
 
 
@@ -49,6 +51,14 @@ const router = createBrowserRouter([
         element: <NewsPage></NewsPage>,
         loader: ()=>fetch("/news.json")
       },
+      {
+        path: "/register",
+        element: <Register></Register>
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
+      }
     ],
   },
 ]);

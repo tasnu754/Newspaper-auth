@@ -46,6 +46,17 @@ const LeftBar = () => {
           <img src="/public/assets/qZone3.png" alt="" />
         </div>
       </div>
+
+      <div className="bg text-white text-center space-y-14 p-10 rounded-md">
+        <h1 className="text-3xl font-bold">Create an <br /> Amazing <br /> Newspaper</h1>
+        <h3 className="text-base font-normal">
+          Discover thousands of options, easy to customize layouts, one-click to
+          import demo and much more.
+        </h3>
+        <button className="btn btn-secondary rounded-none w-[150px] h-[64px]">
+          Learn More
+        </button>
+      </div>
     </div>
   );
 };

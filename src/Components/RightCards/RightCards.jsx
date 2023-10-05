@@ -25,7 +25,7 @@ const RightCards = () => {
           <figure>
             <img
               className="mt-4"
-              src="../../../public/assets/1.png"
+              src="../../../public/assets/2.png"
               alt="car!"
             />
           </figure>
@@ -43,7 +43,7 @@ const RightCards = () => {
           <figure>
             <img
               className="mt-4"
-              src="../../../public/assets/1.png"
+              src="../../../public/assets/3.png"
               alt="car!"
             />
           </figure>

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -32,6 +32,16 @@ const Navbar = () => {
             }
           >
             Career
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/register"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""
+            }
+          >
+            Register
           </NavLink>
         </li>
       </>
@@ -72,9 +82,9 @@ const Navbar = () => {
           </div>
           <div className="navbar-end flex gap-4">
             <img className="h-[44px] " src="/public/assets/user.png" alt="" />
-            <a className="btn bg-[#403F3F] text-white hover:text-black">
+            <Link to="/login" className="btn bg-[#403F3F] text-white hover:text-black">
               Login
-            </a>
+            </Link>
           </div>
         </div>
       </div>
