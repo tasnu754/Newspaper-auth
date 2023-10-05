@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const NewsCard = ({ newsCard }) => {
   return (
-    <div>
-      <div className="card lg:mx-10 mb-10 bg-base-100 shadow-2xl">
+    <div className="">
+      <div className="card lg:mx-10 mb-10 bg-base-100 shadow-2xl mx-auto ">
         <h2 className="card-title text-center my-4 mx-4">{newsCard.title}</h2>
         <figure>
           <img className=" w-[90%]" src={newsCard.thumbnail_url} alt="Shoes" />
@@ -24,7 +24,6 @@ const NewsCard = ({ newsCard }) => {
           ) : (
             <p>{newsCard.details}</p>
           )}
-          
         </div>
       </div>
     </div>

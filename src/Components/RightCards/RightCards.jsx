@@ -3,7 +3,7 @@
 const RightCards = () => {
     return (
       <div className="">
-        <div className="card w-96 glass mt-4 ">
+        <div className="card w-96 mx-auto glass mt-4 ">
           <figure>
             <img
               className="mt-4"
@@ -21,7 +21,7 @@ const RightCards = () => {
             </div>
           </div>
         </div>
-        <div className="card w-96 glass mt-4">
+        <div className="card w-96 mx-auto glass mt-4">
           <figure>
             <img
               className="mt-4"
@@ -39,7 +39,7 @@ const RightCards = () => {
             </div>
           </div>
         </div>
-        <div className="card w-96 glass mt-4">
+        <div className="card w-96 mx-auto glass mt-4">
           <figure>
             <img
               className="mt-4"
@@ -57,7 +57,7 @@ const RightCards = () => {
             </div>
           </div>
         </div>
-        <div className="card w-96 glass mt-4">
+        <div className="card w-96 mx-auto glass mt-4 mb-10">
           <figure>
             <img
               className="mt-4"

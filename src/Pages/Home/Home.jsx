@@ -19,10 +19,8 @@ const Home = () => {
             <RightBar></RightBar>
             <RightCards></RightCards>
           </div>
-          <div className="col-span-4 lg:col-span-2 space-y-10">
-            {/* <NavLink to={`/news.json/${id}`}>
-              <News></News>
-            </NavLink> */}
+          <div className="w-[95%] col-span-4 lg:col-span-2 mx-auto space-y-10">
+            <h2 className="text-center font-bold text-3xl">News</h2>
             <Outlet></Outlet>
           </div>
           <div className="col-span-4 lg:col-span-1">
