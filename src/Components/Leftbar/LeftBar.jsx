@@ -2,7 +2,7 @@ import { FaGoogle , FaGithub , FaFacebook ,FaInstagram ,FaTwitter} from "react-i
 
 const LeftBar = () => {
   return (
-    <div className="space-y-14 ">
+    <div className="space-y-14 pl-10 ">
       <div className="flex flex-col gap-4">
         <p className="text-lg font-bold">Login With</p>
         <button className="btn lowercase text-blue-500 border-blue-500 bg-none">
@@ -38,7 +38,14 @@ const LeftBar = () => {
           </button>
         </div>
       </div>
-      <div></div>
+      <div className="bg-[#F3F3F3] p-10 rounded-md">
+        <p className="text-xl font-bold mb-10">Q-Zone</p>
+        <div>
+          <img src="/public/assets/qZone1.png" alt="" />
+          <img src="/public/assets/qZone2.png" alt="" />
+          <img src="/public/assets/qZone3.png" alt="" />
+        </div>
+      </div>
     </div>
   );
 };

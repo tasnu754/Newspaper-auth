@@ -17,7 +17,7 @@ const NewsPage = () => {
     <div>
       <Header></Header>
 
-      <div className="grid grid-cols-4 mt-10">
+      <div className="space-y-10 lg:space-y-0 lg:grid grid-cols-4 mt-10">
         <div className=" col-span-3 flex justify-center">
           <div className="card card-compact  w-full bg-base-100 shadow-xl">
             <div>
